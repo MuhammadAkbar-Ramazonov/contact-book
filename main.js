@@ -22,14 +22,14 @@ elForm.addEventListener("submit", function(evt){
     for (const arr of array) {
         if(arr.phoneNumber == elInputNumber.value){
             check = true;
-            elInputNumber.classList.add("ivalid-tel");
+            elInputNumber.classList.add("invalid-tel");
             elInputNumber.classList.remove("mb-3");
         }
     }
     
     if(!check){
-        elInputNumber.classList.remove("invalid-tel");
         elInputNumber.classList.add("mb-3");
+        elInputNumber.classList.remove("invalid-tel");
 
         array.push(obj);
         elForm.reset();

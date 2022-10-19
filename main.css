@@ -1,9 +1,9 @@
-.ivalid-tel {
+.invalid-tel {
   border: 2px solid red;
   color: red;
 }
 
-.ivalid-tel ~ .invalid {
+.invalid-tel ~ .invalid {
   display: block;
 }
 .invalid{
