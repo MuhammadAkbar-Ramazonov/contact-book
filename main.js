@@ -28,7 +28,7 @@ elForm.addEventListener("submit", function(evt){
     }
     
     if(!check){
-        elInputNumber.classList.remove("invalid");
+        elInputNumber.classList.remove("invalid-tel");
         elInputNumber.classList.add("mb-3");
 
         array.push(obj);
