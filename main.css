@@ -1,0 +1,13 @@
+.ivalid-tel {
+  border: 2px solid red;
+  color: red;
+}
+
+.ivalid-tel ~ .invalid {
+  display: block;
+}
+.invalid{
+  display: none;
+  margin-bottom: 0;
+  color: red;
+}
