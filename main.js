@@ -30,7 +30,7 @@ elForm.addEventListener("submit", function(evt){
     if(!check){
         elInputNumber.classList.add("mb-3");
         elInputNumber.classList.remove("invalid-tel");
-
+        
         array.push(obj);
         elForm.reset();
         elList.innerHTML = "";
@@ -45,7 +45,8 @@ elForm.addEventListener("submit", function(evt){
             const item = document.createElement("li");
             item.classList.add("fw-normal");
             item.classList.add("mb-4");        
-            item.classList.add("text-center");        
+            item.classList.add("text-center");  
+            item.classList.add("site-item");        
             
             const fristTitle = document.createElement("h2");
             fristTitle.textContent = array[i].firstName;
@@ -70,13 +71,19 @@ elForm.addEventListener("submit", function(evt){
             const elDelet = document.createElement("button");
             elDelet.textContent = "Delet";
             item.appendChild(elDelet);
+            elDelet.classList.add("site-delet");
             elDelet.classList.add("d-block");
             elDelet.classList.add("btn");
             elDelet.classList.add("btn-danger");
             elDelet.classList.add("mx-auto");
             
-            
+            elDelet.addEventListener("click" , function(){
+                item.classList.add("d-none");
+                elList.classList.remove("p-3");
+                array.length = 0;
+            })
             elList.appendChild(item);
+            
         }
     }
 })
